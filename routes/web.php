@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses'=>'PostController@index','as'=>'posts.index']);
+
+Route::get('/post/{post}',['uses'=>'PostController@show','as'=>'posts.show']);
